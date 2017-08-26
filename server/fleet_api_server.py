@@ -4,8 +4,9 @@ from pymongo import MongoClient
 from flask_cors import CORS, cross_origin
 import json
 import requests
-
-
+import hashlib, uuid
+import calendar
+import time
 
 class API():
 
@@ -21,6 +22,10 @@ class API():
     }
     mongo = MongoClient(mongo_config['host'],int(mongo_config['port']))
 
+    def validate_user(self,user):
+        print user
+        return True
+
     def __init__(self):
         pass
 
@@ -29,6 +34,21 @@ class API():
     @staticmethod
     @app.route('/api/v1.0/register', methods=['POST'])
     def fleet_register():
+        user = request.json['user']
+        password = request.json['pass']
+        time_now = calendar.timegm(time.gmtime())
+        salt = uuid.uuid4().hex
+        hashed_password = hashlib.sha512(password + salt).hexdigest()
+        email = request.json['email']
+        user_fullname = request.json['user_fullname']
+
+        if API.validate_user(user) is False:
+            print "User already exists"
+        else:
+            print "user exists!"
+
+
+
         results = {}
         return jsonify({'result': results})
 
