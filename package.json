@@ -1,0 +1,19 @@
+{
+  "name": "fleetmanager",
+  "version": "1.0.0",
+  "description": "Fleet Management webapp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brtsai/FleetManager.git"
+  },
+  "author": "Bryan Tsai & Andy Lien",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brtsai/FleetManager/issues"
+  },
+  "homepage": "https://github.com/brtsai/FleetManager#readme"
+}
