@@ -31,6 +31,8 @@ h1 {
     padding-top: 50px;
     background: white;
     height: 85px;
+    border-bottom-style: solid;
+    border-color: black;
     z-index: 1;
 }
 
