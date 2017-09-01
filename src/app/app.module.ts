@@ -9,6 +9,8 @@ import { LoginComponent } from './login/login.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SignupComponent } from './signup/signup.component';
 import { HomepageComponent } from './homepage/homepage.component';
+import { FooterComponent } from './footer/footer.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { HomepageComponent } from './homepage/homepage.component';
     LoginComponent,
     NavbarComponent,
     SignupComponent,
-    HomepageComponent
+    HomepageComponent,
+    FooterComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
@@ -35,6 +39,10 @@ import { HomepageComponent } from './homepage/homepage.component';
             path: '',
             component: HomepageComponent
         },
+        {
+            path: 'contact',
+            component: ContactComponent
+        }
     ])
   ],
   providers: [],
