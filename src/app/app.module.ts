@@ -7,12 +7,16 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { SignupComponent } from './signup/signup.component';
+import { HomepageComponent } from './homepage/homepage.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    NavbarComponent
+    NavbarComponent,
+    SignupComponent,
+    HomepageComponent
   ],
   imports: [
     BrowserModule,
@@ -22,6 +26,14 @@ import { NavbarComponent } from './navbar/navbar.component';
         {
             path: 'login',
             component: LoginComponent
+        },
+        {
+            path: 'signup',
+            component: SignupComponent
+        },
+        {
+            path: '',
+            component: HomepageComponent
         },
     ])
   ],
